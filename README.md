@@ -1,3 +1,5 @@
+Initial commit - no coding done yet
+
 # React Testing TV Show
 
 ## Advanced Web Applications ➡ Testing React
