@@ -721,7 +721,7 @@ test("A season and a season episode can be selected ", async () => {
 
   const { getByText, getAllByText } = render(<App />);
 
-  // wait for dropdown to render
+  // wait until the dropdown renders to defualt intial state of "select a season"
   await waitFor(() => {
     getByText(/select a season/i);
   });
@@ -732,7 +732,7 @@ test("A season and a season episode can be selected ", async () => {
   // mock when a user selects season 1 by clicking it from the dropdown
   fireEvent.mouseDown(getByText(/season 1/i));
 
-  // the last episode of Season 1 has the correct title
+  // test if the last episode of Season 1 has the correct title (we can use this to test all seasons for the correct title)
   expect(getByText(/chapter eight/i)).toHaveTextContent(
     /the upside down/i
   );
